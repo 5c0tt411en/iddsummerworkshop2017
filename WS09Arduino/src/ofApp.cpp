@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ard.connect("/dev/tty.usbmodemfd121", 57600);
+    ard.connect("/dev/cu.usbmodem14111", 57600);
     
     ofAddListener(ard.EInitialized, this, &ofApp::setupArduino);
     bSetupArduino	= false;
@@ -10,7 +10,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    updateArduino();
 }
 
 //--------------------------------------------------------------
